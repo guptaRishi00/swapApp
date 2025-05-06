@@ -10,8 +10,6 @@ import {
 
 import { fetchQuote } from "@mayanfinance/swap-sdk";
 import axios from "axios";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useWallet } from "@solana/wallet-adapter-react";
 
 export default function CryptoSwap() {
   const [fromToken, setFromToken] = useState("SOL");
@@ -428,11 +426,7 @@ export default function CryptoSwap() {
 
             {/* Connect Wallet Button */}
             <button className="w-full bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-medium py-3 px-4 rounded-lg transition-colors">
-              {connected
-                ? `${publicKey.toBase58().slice(0, 4)}...${publicKey
-                    .toBase58()
-                    .slice(-4)}`
-                : "Connect Wallet"}
+              Connected Wallet
             </button>
           </div>
         </div>
