@@ -8,8 +8,6 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-import axios from "axios";
-
 export default function CryptoSwap() {
   const [fromToken, setFromToken] = useState("SOL");
   const [toToken, setToToken] = useState("RAY");
