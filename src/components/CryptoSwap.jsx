@@ -8,7 +8,6 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-import { fetchQuote } from "@mayanfinance/swap-sdk";
 import axios from "axios";
 
 export default function CryptoSwap() {
@@ -20,7 +19,6 @@ export default function CryptoSwap() {
   const [fromAmount, setFromAmount] = useState("");
   const [toAmount, setToAmount] = useState("");
   const [conversionRate, setConversionRate] = useState(12.85);
-  const { publicKey, connect, disconnect, connected } = useWallet();
 
   // Generate mock exchange rates
   const getExchangeRate = (from, to) => {
